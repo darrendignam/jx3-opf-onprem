@@ -17,16 +17,20 @@ spec:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: darrendignam
+    repository: jx3-opf-onprem
   - key: staging
   - key: production
   ingress:
-    domain: ""
-    externalDNS: false
+    domain: 172.104.255.30.nip.io
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: darrendignam
   repository: bucketrepo
   secretStorage: local
   vault: {}
